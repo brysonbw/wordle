@@ -93,7 +93,7 @@ export default function Home(): React.JSX.Element {
     async function getRandomWord(): Promise<void> {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_APP_RANDOM_WORD_BASE_URL}word`,
+          `${process.env.NEXT_PUBLIC_RANDOM_WORD_API_BASE_URL}word`,
           {
             signal: controller.signal,
           }
