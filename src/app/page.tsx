@@ -88,6 +88,10 @@ export default function Home(): React.JSX.Element {
     showDialog('Word Definition', <WordDefinitionDialogContent word={word} />);
   }
 
+  function startNewGame(): void {
+    window.location.reload();
+  }
+
   useEffect(() => {
     const controller = new AbortController();
     async function getRandomWord(): Promise<void> {
@@ -132,9 +136,14 @@ export default function Home(): React.JSX.Element {
       ) : (
         <>
           <h1 className={styles.title}>{word.length} Letter Word</h1>
-          <UIButton onClick={openWordHintDialog}>
-            Word Definition <IoInformationCircle />
-          </UIButton>
+          <div className={styles['game-actions']}>
+            <UIButton size="small" onClick={openWordHintDialog}>
+              Word Definition <IoInformationCircle />
+            </UIButton>
+            <UIButton size="small" variant="text" onClick={startNewGame}>
+              Start New Game
+            </UIButton>
+          </div>
           <Grid word={word} guesses={guesses} currentGuess={currentGuess} />
           <Keyboard
             onChar={onChar}
