@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--word-length, 5), 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: min(100%, calc(var(--word-length, 5) * 3.75rem));
+  grid-template-rows: auto;
+  margin: 0 auto;
+}

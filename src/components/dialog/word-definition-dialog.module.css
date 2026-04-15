@@ -1,0 +1,63 @@
+.container {
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.loading {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.error {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #3f7aef;
+}
+
+.meaning {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.meaning:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.part-of-speech {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.definition-list {
+  padding-left: 1.125rem;
+  margin: 0;
+}
+
+.definition-item {
+  font-size: 0.875rem;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+}
+
+.synonyms {
+  color: #2563eb;
+}
+
+.antonyms {
+  color: #dc2626;
+}
+
+.label {
+  font-weight: 600;
+}

@@ -1,0 +1,47 @@
+.tile {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #d3d6da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.tile-green {
+  background-color: var(--correct);
+  color: var(--white);
+  border: none;
+}
+
+.tile-yellow {
+  background-color: var(--present);
+  color: var(--white);
+  border: none;
+}
+
+.tile-gray {
+  background-color: var(--absent);
+  color: var(--white);
+  border: none;
+}
+
+.tile-row {
+  display: flex;
+  gap: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.examples {
+  margin-top: 0.625rem;
+}
+
+.text-block {
+  margin-bottom: 0.375rem;
+}
+
+.list {
+  padding-left: 1.125rem;
+  margin-top: 0.5rem;
+}

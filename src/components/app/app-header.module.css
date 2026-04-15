@@ -1,0 +1,52 @@
+.header {
+  margin-top: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 1.3rem;
+  width: auto;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.app-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links *:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 640px) {
+  .logo {
+    height: 1.65rem;
+  }
+
+  .app-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .github-logo {
+    filter: invert(1);
+  }
+}

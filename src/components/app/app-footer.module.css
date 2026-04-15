@@ -1,0 +1,22 @@
+.footer-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  display: flex;
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .footer-content {
+    font-size: 0.7rem;
+  }
+}

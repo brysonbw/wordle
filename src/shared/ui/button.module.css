@@ -1,0 +1,184 @@
+:root {
+  --ui-button-dark: #1f2328;
+  --ui-button-dark-hover: #2b2f36;
+
+  --ui-button-mid: #6b7280;
+
+  --ui-button-light: #f5f5f4;
+  --ui-button-light-hover: #e7e5e4;
+
+  --ui-button-text-main: #3f3f46;
+  --ui-button-white: #f8fafc;
+
+  --ui-button-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --ui-button-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --ui-button-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --ui-button-sm-h: 2.25rem;
+  --ui-button-sm-px: 0.875rem;
+  --ui-button-md-h: 3.125rem;
+  --ui-button-md-px: 1.5rem;
+  --ui-button-lg-h: 4rem;
+  --ui-button-lg-px: 2rem;
+
+  --ui-button-border-radius-none: 0;
+  --ui-button-border-radius-sm: 0.2rem;
+  --ui-button-border-radius-md: 0.3rem;
+  --ui-button-border-radius-lg: 0.4rem;
+  --ui-button-border-radius-full: 6.25rem;
+}
+
+/* Base */
+.ui-button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border: 1px solid transparent;
+  outline: none;
+  user-select: none;
+  font-family: inherit;
+  font-weight: 500;
+  transition: var(--ui-button-transition);
+  border-radius: var(--ui-button-border-radius-md);
+}
+
+/* Size */
+.ui-button[data-size='small'] {
+  height: var(--ui-button-sm-h);
+  padding: 0 var(--ui-button-sm-px);
+  font-size: 0.875rem;
+  min-width: 5rem;
+}
+
+.ui-button[data-size='medium'] {
+  height: var(--ui-button-md-h);
+  padding: 0 var(--ui-button-md-px);
+  font-size: 1rem;
+  min-width: 9.375rem;
+}
+
+.ui-button[data-size='large'] {
+  height: var(--ui-button-lg-h);
+  padding: 0 var(--ui-button-lg-px);
+  font-size: 1.125rem;
+  min-width: 12rem;
+}
+
+/* Rounded */
+.ui-button[data-rounded='none'] {
+  border-radius: var(--ui-button-border-radius-none);
+}
+
+.ui-button[data-rounded='small'] {
+  border-radius: var(--ui-button-border-radius-sm);
+}
+
+.ui-button[data-rounded='medium'] {
+  border-radius: var(--ui-button-border-radius-md);
+}
+
+.ui-button[data-rounded='large'] {
+  border-radius: var(--ui-button-border-radius-lg);
+}
+
+.ui-button[data-rounded='full'] {
+  border-radius: var(--ui-button-border-radius-full);
+}
+
+/* Contained */
+.ui-button[data-variant='contained'] {
+  background-color: var(--ui-button-dark);
+  color: var(--ui-button-white);
+  box-shadow: var(--ui-button-shadow-sm);
+}
+
+.ui-button[data-variant='contained']:hover {
+  background-color: var(--ui-button-dark-hover);
+  box-shadow: var(--ui-button-shadow-md);
+  transform: translateY(-1px);
+}
+
+/* Tonal */
+.ui-button[data-variant='tonal'] {
+  background-color: var(--ui-button-light);
+  color: var(--ui-button-text-main);
+  border-color: var(--ui-button-light-hover);
+}
+
+.ui-button[data-variant='tonal']:hover {
+  background-color: var(--ui-button-light-hover);
+}
+
+/* Outlined */
+.ui-button[data-variant='outlined'] {
+  background-color: transparent;
+  border-color: var(--ui-button-mid);
+  color: var(--ui-button-mid);
+}
+
+.ui-button[data-variant='outlined']:hover {
+  background-color: rgba(100, 116, 139, 0.05);
+  border-color: var(--ui-button-dark);
+  color: var(--ui-button-dark);
+}
+
+/* Text */
+.ui-button[data-variant='text'] {
+  background-color: transparent;
+  color: var(--ui-button-mid);
+  min-width: auto;
+}
+
+.ui-button[data-variant='text']:hover {
+  background-color: rgba(100, 116, 139, 0.08);
+  color: var(--ui-button-dark);
+}
+
+/* Utility states */
+.ui-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: grayscale(1);
+  transform: none !important;
+}
+
+.ui-button:focus-visible {
+  outline: 2px solid var(--ui-button-mid);
+  outline-offset: 2px;
+}
+
+/* Light/dark browswer color scheme tweaks */
+@media (prefers-color-scheme: light) {
+  :root {
+    --ui-button-mid: #444952;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Outlined */
+  .ui-button[data-variant='outlined'] {
+    background-color: transparent;
+    border-color: #8a8d93;
+    color: #b0b4ba;
+  }
+
+  .ui-button[data-variant='outlined']:hover {
+    background-color: rgba(134, 137, 142, 0.045);
+    border-color: #d6d9de;
+    color: #f8fafc;
+  }
+
+  /* Text */
+  .ui-button[data-variant='text'] {
+    background-color: transparent;
+    color: #b0b4ba;
+    min-width: auto;
+  }
+
+  .ui-button[data-variant='text']:hover {
+    background-color: rgba(134, 137, 142, 0.065);
+    color: #f8fafc;
+  }
+}
