@@ -22,7 +22,7 @@ export default function WordDefinitionDialogContent({
     async function getWordDefinition(): Promise<void> {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_APP_DICTIONARY_API}${word}`,
+          `${process.env.NEXT_PUBLIC_DICTIONARY_API_BASE_URL}${word}`,
           { signal: controller.signal }
         );
         if (!response.ok) throw new Error('Failed to fetch data');
